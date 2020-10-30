@@ -1,0 +1,96 @@
+provider "aws" {
+  access_key = ""
+  secret_key = ""
+  region = "us-east-2"
+}
+variable "instance_count" {
+  default = "2"
+}
+resource "aws_instance" "web" {
+  ami           = "ami-03657b56516ab7912"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "APPSERVER-${count.index + 1}"
+}
+  key_name = "Updated-key"
+  vpc_security_group_ids = ["sg-0845decc3c2ba0b7f"]
+  subnet_id = "subnet-a71669eb"
+  user_data = <<-EOF
+   #!/bin/bash
+   yum install httpd -y
+   systemctl enable httpd
+   systemctl start httpd
+   yum install mysql -y
+   sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+   sudo chown -R apache /var/www
+   sudo chgrp -R apache /var/www
+   sudo chmod 775 /var/www
+   sudo find /var/www -type d -exec sudo chmod 2775 {} \;
+   sudo find /var/www -type f -exec sudo chmod 0664 {} \;
+   sed -i 's/DirectoryIndex index.html/DirectoryIndex index.php/' /etc/httpd/conf/httpd.conf
+   sudo systemctl restart httpd
+   sudo yum install git -y
+   sudo git clone https://github.com/Pavan-971/Updated-infosys.git
+   sudo cp -R Updated-infosys/* /var/www/html/
+   sudo yum install python-setuptools python-setuptools-devel
+   sudo easy_install pip
+   sudo pip install awscli --ignore-installed six
+   sudo pip install awscli==1.6.6
+   sudo pip install boto3
+   sed -i '63 s/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+   systemctl restart sshd
+   echo root:root | chpasswd
+
+  EOF
+  count = var.instance_count
+
+
+
+
+  connection {
+     type     = "ssh"
+     user     = "root"
+     password = "root"
+     host     = "${self.public_ip}"
+   }
+
+
+
+
+
+  provisioner "remote-exec" {
+    inline = [
+      "sudo tar -C /var/www/html/ -xvf  /var/www/html/pat.tar.gz",
+      "sudo python /var/www/html/pyt.py > /var/www/html/sad.txt",
+      "sudo bash /var/www/html/bash.sh"
+    ]
+  }
+}
+
+resource "aws_elb" "bar" {
+  name               = "mylb"
+  subnets            = ["subnet-010dd36a","subnet-e3829699","subnet-a71669eb"]
+  listener {
+    instance_port     = 80
+    instance_protocol = "http"
+    lb_port           = 80
+    lb_protocol       = "http"
+  }
+ health_check {
+    healthy_threshold   = 2
+    unhealthy_threshold = 2
+    timeout             = 3
+    target              = "HTTP:80/index.php"
+    interval            = 30
+  }
+ tags = {
+    Name = "mylb"
+  }
+}
+
+ resource "aws_elb_attachment" "baz" {
+  elb      = aws_elb.bar.id
+  count    = var.instance_count
+  instance = aws_instance.web[count.index].id
+}
