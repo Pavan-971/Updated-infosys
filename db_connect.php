@@ -1,5 +1,5 @@
 <?php
-$connection = mysqli_connect('projectdb.cxtbv5qezsu9.us-east-2.rds.amazonaws.com', 'admin', 'sqladmin');
+$connection = mysqli_connect('projectdb.cctescinjgxe.us-east-2.rds.amazonaws.com', 'admin', 'sqladmin');
 if (!$connection){
     die("Database Connection Failed" . mysqli_error($connection));
 }
