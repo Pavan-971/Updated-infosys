@@ -1,5 +1,30 @@
 #!/bin/bash
 
+
+fileToBeRead="/var/www/html/sad.txt" #Whatever
+
+var=$(tr -d '[:blank:]\n' < $fileToBeRead)
+echo $var
+sed -i "20 s#.*header('Location:.*#header('Location: http://$var/second.html');#" details.php
+
+
+fileToBeRead="/var/www/html/sad.txt" #Whatever
+
+var=$(tr -d '[:blank:]\n' < $fileToBeRead)
+echo $var
+sed -i "25 s#.*window.location.href=.*#window.location.href='http://$var/details.php'#"  details.php
+
+
+
+
+
+
+
+
+
+
+
+
 fileToBeRead="/var/www/html/sad.txt" #Whatever
 
 var=$(tr -d '[:blank:]\n' < $fileToBeRead)
