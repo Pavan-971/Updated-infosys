@@ -12,7 +12,7 @@ fileToBeRead="/var/www/html/sad.txt" #Whatever
 
 var=$(tr -d '[:blank:]\n' < $fileToBeRead)
 echo $var
-sed -i "25 s#.*window.location.href=.*#window.location.href='http://$var/details.php'#"  /var/www/html/details.php
+sed -i "25 s#.*window.location.href=.*#window.location.href='http://$var'#"  /var/www/html/details.php
 
 
 
