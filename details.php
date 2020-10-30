@@ -22,7 +22,7 @@ if ($count == 1){
 }else{
         echo "<script>
         alert('Invalid Login Credentials');
-        window.location.href='http://mylb-881820281.us-east-2.elb.amazonaws.com/details.php';
+        window.location.href='http://mylb-881820281.us-east-2.elb.amazonaws.com';
         </script>";
 
 //echo "Invalid Login Credentials";
