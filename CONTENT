@@ -1,0 +1,113 @@
+About Course 
+Become an expert in Jenkins by mastering Build Pipeline, Reporting, Email & Build plugins, Secure Jenkins, Apache, Nginx, Python, Docker, New relic, AWS and other related concepts
+
+Curriculum 
+Continuous Integration 
+Learning Objective: 
+In this module, you will learn about what is Continuous Integration(CI), why CI, Best practices in CI and tools for continuous integration and continues deployment.
+OVERVIEW OF TOPICS:
+1.Jenkins
+2.AWS
+3.NEW RELIC
+4.DOCKER
+5.PYTHON
+
+Jenkins 
+
+ Install Jenkins on a local machine Starting Up with Jenkins topics:Jenkins Architecture and terms of Jenkins Overview of Jenkins UI Creating a Jenkins Job Configuring a Jenkins job, Installing the Jenkins setup, create a simple Jenkins job, delete, fail, disable the job.
+Learning Objective: In this module, you will learn about Jenkins, setting up Jenkins environment on your local setup, terminologies used in Jenkins and creating Jenkins job.
+
+Plugins and its uses topics: Introduction to Plugins Adding Plugins to Jenkins Commonly used plugins (Git Plugin, Parameter Plugin, HTML Publisher, Copy Artifact and Extended choice parameters) Configuring Jenkins to work with java, Git and Maven Creating a Jenkins Build and Jenkins workspace Configure Jenkins to check for source code changes periodically. Working with Maven Build Jobs.
+Learning Objective: In this module, you will learn about Jenkins, setting up Jenkins environment on your local setup, terminologies used in Jenkins and creating Jenkins job.
+
+Plugins and its uses topics: Introduction to Plugins Adding Plugins to Jenkins Commonly used plugins (Git Plugin, Parameter Plugin, HTML Publisher, Copy Artifact and Extended choice parameters) Configuring Jenkins to work with java, Git and Maven Creating a Jenkins Build and Jenkins workspace Configure Jenkins to check for source code changes periodically. Working with Maven Build Jobs.
+Learning Objective: In this module, we will learn about various plugins available in Jenkins and their usage. Then we will learn to configure Jenkins to work with other tools, working with maven builds and polling for source code changes
+
+Setting Up Your Build Jobs and Security topics: Creating a Freestyle Build Job Introduction to Build Triggers and to Build Steps www.edureka.co © 2019 Brain4ce Education Solutions Pvt. Ltd. All rights Reserved. Pre-and Post-Build Actions: Adding properties and properties files Running Your New Build Job Parametrized Builds Distributed builds Setting Email notification Enabling Security in Jenkins Different Levels of Authentication Types of Access and Administration of the Access.
+Learning Objective: In this module, we will learn to learn to Build Jobs, add the advanced features to Jobs and Security.
+
+AWS
+1.IAM
+2.EC2
+3.EBS
+4.S3
+5.RDS
+6.VPC
+7.SNS
+8.LOAD BALANCER
+9.AUTO SCALING
+Amazon Web Services (AWS) is Amazon’s cloud web hosting platform that offers flexible, reliable, scalable, easy-to-use, and cost-effective solutions. This tutorial covers various important topics illustrating how AWS works and how it is beneficial to run your website on Amazon Web Services.
+What is AWS?
+o	The AWS service is provided by the Amazon that uses distributed IT infrastructure to provide different IT resources available on demand. It provides different services such as infrastructure as a service (IaaS), platform as a service (PaaS) and packaged software as a service (SaaS).
+Uses of AWS
+o	A small manufacturing organization uses their expertise to expand their business by leaving their IT management to the AWS.
+o	A large enterprise spread across the globe can utilize the AWS to deliver the training to the distributed workforce.
+o	An architecture consulting company can use AWS to get the high-compute rendering of construction prototype.
+o	A media company can use the AWS to provide different types of content such as ebox or audio files to the worldwide files.
+
+
+
+NEW RELIC 
+Whether you are new to AWS or a cloud native, New Relic One delivers the end-to-end observability critical to your success when you choose the Amazon Web Services (AWS) cloud. New Relic utilizes a single data platform for all metrics, events, logs, and traces and delivers the ability to visualize, analyze, and troubleshoot your entire AWS environment.  
+TOPICS:
+1.Installation
+2.Configuration
+3.Features
+4.Hosts and Services
+5.Alert configuration
+6.Integration with AWS
+
+New Relic is the most popular continuous monitoring tool. It monitors complete IT infrastructure including its systems, applications, services processes etc.
+.
+DOCKERS
+
+ 1. Introduction
+ 2. Managing docker containers 
+ 3. Inputs/Outputs
+ 4. Managing docker images
+ 5. Building docker images
+ 6. Security considerations 
+ 7. The ecosystem & the future 2 / 84 Intro Containers I/O I
+
+Docker Commands and Structures 
+•	Inspect Container Processes 
+•	Previous Container Management 
+•	Controlling Port Exposure on Containers 
+•	Naming Our Containers 
+•	Docker Events 
+•	Managing and Removing Base Images 
+•	Saving and Loading Docker Images 
+•	Image History 
+Working with docker registry
+•	Customizing the docker image
+•	Re-tagging the images
+•	Pushing customized images to registry
+
+
+
+
+
+
+
+PYTHON
+Python is a general-purpose interpreted, interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. Like Perl, Python source code is also available under the GNU General Public License (GPL). This tutorial gives enough understanding on Python programming language.
+Why to Learn Python?
+Python is a high-level, interpreted, interactive and object-oriented scripting language. Python is designed to be highly readable. It uses English keywords frequently where as other languages use punctuation, and it has fewer syntactical constructions than other languages.
+Python is a MUST for students and working professionals to become a great Software Engineer specially when they are working in Web Development Domain. I will list down some of the key advantages of learning Python:
+•	Python is Interpreted − Python is processed at runtime by the interpreter. You do not need to compile your program before executing it. This is similar to PERL and PHP.
+•	Python is Interactive − You can actually sit at a Python prompt and interact with the interpreter directly to write your programs.
+•	Python is Object-Oriented − Python supports Object-Oriented style or technique of programming that encapsulates code within objects.
+•	Python is a Beginner's Language − Python is a great language for the beginner-level programmers and supports the development of a wide range of applications from simple text processing to WWW browsers to games.
+
+TOPICS
+         Introduction
+        Basic Syntax
+        Variables
+        Basic Operations
+        Decision Making
+        LOOPS
+        NUMBERS
+        STRINGS
+        LISTS
+        TUPLES
+        DICTIONARY
